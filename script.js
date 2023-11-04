@@ -46,11 +46,34 @@ newLi.innerHTML = "Austin";
 pastRaces.append(newLi);
 
   // Part 7
-
-
+const main = document.querySelector(".main");
+const newBlog = document.createElement("div");
+const text = document.createElement("h2");
+const blogBody = document.createElement("p");
+newBlog.setAttribute("class","blog-post-Austin");
+text.textContent = newLi.textContent;
+text.style.color = "black";
+blogBody.textContent = "Howdy y'all, we love Austin!";
+newBlog.appendChild(text);
+newBlog.appendChild(paragraph);
+main.appendChild(BlogBody);
 
   // Part 8
-
+  const quoteTitle = function() {
+    document.querySelector('#quote-of-the-day').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
+  };
+  quoteTitle.addEventListener("click", (e) => {
+    randomQuote();
+  })
 
   // Part 9
+const blogPost = document.querySelectorAll(".blog-post");
+for (let i=0; i < blogPost.length; i++) {
+  blogPost[i].addEventListener("mouseout", (e) => {
+    blogPost[i].classList.toggle("purple");
+  });
+  blogPost[i].addEventListener("mouseenter", (e) => {
+    blogPost[i].classList.toggle("red");
+  });
+}
 })
